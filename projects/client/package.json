@@ -1,0 +1,7 @@
+{
+  "name": "client",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.7.7"
+  }
+}

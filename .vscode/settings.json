@@ -1,0 +1,16 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "javascript.validate.enable": true,
+  "files.exclude": {
+    "**/dist/**": false,
+    "**/*bundle.*/**": true,
+    "**/node_modules/**": true,
+    "**/.cache/**": true,
+    "**/yarn.lock": true,
+    "**/package-lock.json": true,
+    "**/.gitkeep": true,
+  },
+  // disable editor format for prettier
+  "typescript.format.enable": false,
+  "javascript.format.enable": false
+}
