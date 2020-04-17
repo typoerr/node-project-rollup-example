@@ -4,6 +4,7 @@ import typescript from '@rollup/plugin-typescript'
 import commonjs from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 
+const ENV = process.env.NODE_ENV || 'development'
 const ROOT = path.resolve(__dirname, '../')
 const BASE = path.join(ROOT, 'projects/server')
 const INPUT = path.join(BASE, 'index.ts')
@@ -30,10 +31,10 @@ export default {
       module: 'ESNext',
       exclude: ['**/node_modules/**', '**/*.test.ts'],
     }),
-    commonjs(),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify(ENV),
     }),
+    commonjs(),
     resolve(),
   ],
   external,

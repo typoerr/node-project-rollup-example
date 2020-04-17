@@ -28,10 +28,10 @@ export default {
       module: 'ESNext',
       exclude: ['**/node_modules/**', '**/*.test.ts'],
     }),
-    commonjs(),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify(ENV),
     }),
+    commonjs(),
     resolve(),
   ],
 }
